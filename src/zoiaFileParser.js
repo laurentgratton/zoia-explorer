@@ -9,6 +9,7 @@ fileInput.onchange = function () {
     d3.select("#grid").selectAll("svg").remove();
     d3.select('#network-graph').selectAll("svg").remove();
     zoia = {};
+    currPage = 0;
     var result = this.result;
     var hex = "";
     for (var i = 0; i < this.result.length; i++) {
