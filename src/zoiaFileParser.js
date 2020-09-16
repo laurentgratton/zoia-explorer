@@ -10,6 +10,7 @@ fileInput.onchange = function () {
     d3.select('#network-graph').selectAll("svg").remove();
     zoia = {};
     currPage = 0;
+    document.getElementById('modules').textContent = "";
     var result = this.result;
     var hex = "";
     for (var i = 0; i < this.result.length; i++) {
@@ -36,6 +37,8 @@ fileInput.onchange = function () {
     if(pageNames && pageNames.names) {
       pageNames.names.map((n, i) => {if(zoia.pages[i]) { zoia.pages[i].name = n}});
     }
+    document.getElementById('grid').classList.add("show");
+    document.getElementById('loaded-message').classList.add("show");
     initd3();
   };
   fr.readAsBinaryString(this.files[0]);

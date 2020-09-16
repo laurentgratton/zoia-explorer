@@ -1,15 +1,19 @@
 h1	{
     text-align: center;
 }
+
 p.center {
     text-align: center;
 }
+
 #network-graph {
     margin-top: 30px;
 }
+
 #network-graph svg{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .node-labels{font-size: 12px;}
 
 .highlighted {
@@ -47,13 +51,28 @@ circle.highlighted {
     max-width: 460px;
     border-radius: 2px;
     min-height: 320px;
+    display:none;
+}
+
+#grid.show {
+    display:block;
 }
 
 .left-panel {
     text-align: center;
 }
+
 .left-panel button {
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+#loaded-message {
+    text-align: center;
+    display: none;
+}
+
+#loaded-message.show {
+    display:block;
 }
