@@ -43,7 +43,7 @@ circle.highlighted {
 #grid {
     margin: 20px auto;
     padding: 36px 10px 70px 118px;
-    background: url("/img/zoia-background.jpg");
+    background: url("../img/zoia-background.jpg");
     max-width: 460px;
     border-radius: 2px;
     min-height: 320px;
