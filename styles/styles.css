@@ -1,0 +1,59 @@
+h1	{
+    text-align: center;
+}
+p.center {
+    text-align: center;
+}
+#network-graph {
+    margin-top: 30px;
+}
+#network-graph svg{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.node-labels{font-size: 12px;}
+
+.highlighted {
+    stroke: orange !important;
+    stroke-width: 3px;
+}
+
+circle.highlighted {
+    animation: pulse 2s;
+    transform: scale(1.25);
+    stroke-width:2px;
+    stroke: red !important;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(2);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(1.25);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+#grid {
+    margin: 20px auto;
+    padding: 36px 10px 70px 118px;
+    background: url("/img/zoia-background.jpg");
+    max-width: 460px;
+    border-radius: 2px;
+    min-height: 320px;
+}
+
+.left-panel {
+    text-align: center;
+}
+.left-panel button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
