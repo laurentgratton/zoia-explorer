@@ -266,7 +266,7 @@ function initd3() {
   })
   dispatcher.on('nodeSelectGraph', function(item){
     console.log(item)
-    currPage = item.page;
+    currPage = zoia.pages.findIndex(c => c.id === item.page);
     row = grid.selectAll(".row");
     column = row.selectAll(".square");
     pageData = gridData();
