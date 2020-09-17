@@ -161,6 +161,7 @@ var getSize = (patch) => {
   var data = patch
     .substr(0, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('');
   var size = parseInt(data, 16);
@@ -181,6 +182,7 @@ var getName = (patch) => {
 var getNumConnections = (patch, endModules) => {
   var data = patch.substr(endModules, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('')
   return parseInt(data || 0, 16);
@@ -188,6 +190,7 @@ var getNumConnections = (patch, endModules) => {
 var getNumberPages = (patch, endConnections) => {
   var numberPages = patch.substr(endConnections, 11)
     .split(' ')
+    .reverse()
     .filter(c => c != "00")
     .join('');
   return parseInt(numberPages || 0, 16);
@@ -246,6 +249,7 @@ var getConnections = (patch, endModules, numConnections) => {
 var getConnectionSource = (connection) => {
   var source = connection.substr(0, 11)
     .split(' ')
+    .reverse()
     .filter(c => c != "00")
     .join('');
   return parseInt(source || 0, 16);
@@ -253,6 +257,7 @@ var getConnectionSource = (connection) => {
 var getConnectionSourceOutput = (connection) => {
   var source = connection.substr(12, 11)
     .split(' ')
+    .reverse()
     .filter(c => c != "00")
     .join('');
   return parseInt(source || 0, 16);
@@ -260,6 +265,7 @@ var getConnectionSourceOutput = (connection) => {
 var getConnectionDestination = (connection) => {
   var source = connection.substr(24, 11)
     .split(' ')
+    .reverse()
     .filter(c => c != "00")
     .join('');
   return parseInt(source || 0, 16);
@@ -267,6 +273,7 @@ var getConnectionDestination = (connection) => {
 var getConnectionDestinationInput = (connection) => {
   var source = connection.substr(36, 11)
     .split(' ')
+    .reverse()
     .filter(c => c != "00")
     .join('');
   return parseInt(source || 0, 16);
@@ -274,6 +281,7 @@ var getConnectionDestinationInput = (connection) => {
 var getConnectionStrength = (connection) => {
   var source = connection.substr(48, 11)
     .split(' ')
+    .reverse()
     .filter(c => c != "00")
     .join('');
   return parseInt(source || 0, 16);
@@ -321,6 +329,7 @@ var getModules = (patch, numModules) => {
 var getModuleSize = (sizeBytes) => {
   var size = sizeBytes.substr(0, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('');
   return parseInt(size, 16);
@@ -328,6 +337,7 @@ var getModuleSize = (sizeBytes) => {
 var getModuleType = (moduleData) => {
   var type = moduleData.substr(12, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('');
   return parseInt(type || 0, 16);
@@ -335,6 +345,7 @@ var getModuleType = (moduleData) => {
 var getModulePage = (moduleData) => {
   var page = moduleData.substr(36, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('');
   return parseInt(page || 0, 16);
@@ -342,6 +353,7 @@ var getModulePage = (moduleData) => {
 var getModuleColor = (moduleData) => {
   var page = moduleData.substr(48, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('');
   return parseInt(page || 0, 16);
@@ -349,6 +361,7 @@ var getModuleColor = (moduleData) => {
 var getModuleGridPos = (moduleData) => {
   var page = moduleData.substr(60, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('');
   return parseInt(page || 0, 16);
@@ -359,6 +372,7 @@ var posToXY = (pos) => {
 var getModuleNumberOptions = (moduleData) => {
   var params = moduleData.substr(72, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('');
   return parseInt(params || 0, 16) + 1;
@@ -376,6 +390,7 @@ var getModuleOptions = (moduleData, numOptions) => {
 var getNumPages = (patch, optionStart) => {
   var numPages = patch.substr(optionStart, 11)
     .split(' ')
+    .reverse()
     .filter(c => c !== "00")
     .join('');
   return parseInt(numPages, 16);
