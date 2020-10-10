@@ -4728,6 +4728,163 @@ var zoiaTemplate = {
         return blocks;
       }
     },
+    {
+      "name": "Midi Clock Out",
+      "options": [
+        {
+          "name": "input",
+          "values": [
+            "tap",
+            "cv_control"
+          ]
+        },
+        {
+          "name": "run_in",
+          "values": [
+            "enabled",
+            "disabled"
+          ]
+        },
+        {
+          "name": "reset_in",
+          "values": [
+            "enabled",
+            "disabled"
+          ]
+        }{
+          "name": "position",
+          "values": [
+            "disabled",
+            "enabled"
+          ]
+        }
+      ],
+      "minBlocks":"3",
+      "maxBlocks":"5",
+      "blocks":[
+        {
+          "name":"tap/cv control",
+          "type": 1
+        },
+        {
+          "name":"sent",
+          "type": 1
+        },
+        {
+          "name":"reset",
+          "type": 1
+        },
+        {
+          "name":"send position",
+          "type": 1
+        },
+        {
+          "name":"song position",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {
+        var blocks = [d.blocks[0], d.blocks[1]];
+
+        if(d.options[1] === 1){
+          blocks.push(d.blocks[2]);
+        }
+        if(d.options[2] === 1){
+          blocks.push(d.blocks[3]);
+        }
+        if(d.options[3] === 1){
+          blocks.push(d.blocks[4]);
+        }
+
+        return blocks;
+      }
+    },
+    {
+      "name": "Tap to CV",
+      "options": [
+        {
+          "name": "range",
+          "values": [
+            "off",
+            "on"
+          ]
+        },
+        {
+          "name": "output",
+          "values": [
+            "linear",
+            "exponential"
+          ]
+        }
+      ],
+      "minBlocks":"2",
+      "maxBlocks":"4",
+      "blocks":[
+        {
+          "name":"tap input",
+          "type": 1
+        },
+        {
+          "name":"min time",
+          "type" : 1
+        },
+        {
+          "name": "max time",
+          "type": 1
+        },
+        {
+          "name": "output",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {
+        var blocks = [d.blocks[0]];
+
+        if(d.options[0] === 1){
+          blocks.push(d.blocks[1]);
+          blocks.push(d.blocks[2]);
+        }
+
+        blocks.push(d.blocks[3]);
+
+        return blocks
+      }
+    },
+    {
+      "name": "Midi Pitch Bend In",
+      "options": [
+        {
+          "name": "midi channel",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "pitch bend",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    }
   ],
   "colors":[
     {
