@@ -4751,7 +4751,8 @@ var zoiaTemplate = {
             "enabled",
             "disabled"
           ]
-        }{
+        },
+        {
           "name": "position",
           "values": [
             "disabled",
