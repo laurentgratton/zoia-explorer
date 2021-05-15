@@ -76,3 +76,14 @@ circle.highlighted {
 #loaded-message.show {
     display:block;
 }
+
+.animateTo {
+    stroke-dashoffset: -100px !important;
+    transition: stroke-dashoffset 3.5s !important;
+    stroke: green !important
+}
+.animateFrom {
+    stroke-dashoffset: -100px !important;
+    transition: stroke-dashoffset 3.5s !important;
+    stroke: blue !important;
+}

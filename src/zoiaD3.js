@@ -62,7 +62,7 @@ function gridData() {
           }
           totalBlocks++;
           currX++;
-          if(currX == 8){
+          if(currX === 8){
             currX = 0;
             currY++;
           }
@@ -158,8 +158,13 @@ function initd3() {
   var link = linkNode
     .append("line")
     .style("stroke", "#aaa")
-
-
+    //.style("stroke-width", d => d.strength / 1000)
+    .style("stroke-dasharray", ("5, 3"))
+    .style("transition", "stroke-dashoffset 0s")
+    .style("stroke-dashoffset", "0")
+    .attr('data-to', d => 'graph' + d.origin.id)
+    .attr('data-from', d => 'graph' + d.destination.id)
+    .style('stroke-width', d => d.strength / 5000)
 
   var node = net
     .selectAll("circle")
@@ -178,6 +183,14 @@ function initd3() {
       .on("end", dragended))
     .on('click', function(d) {
       showModule(d);
+      document.querySelectorAll("[data-to='graph" + d.id +"']").forEach(c => {
+        c.classList.add('animateTo');
+        setTimeout(() => {c.classList.remove('animateTo')}, 3000);
+      });
+      document.querySelectorAll("[data-from='graph" + d.id +"']").forEach(c => {
+        c.classList.add('animateFrom');
+        setTimeout(() => {c.classList.remove('animateFrom')}, 3000);
+      });
       dispatcher.call('nodeSelectGraph', this, d);
     });
 
