@@ -76,3 +76,7 @@ circle.highlighted {
 #loaded-message.show {
     display:block;
 }
+
+path.selected {
+    transition: stroke-dashoffset 5s ease-in;
+}

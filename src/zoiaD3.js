@@ -158,6 +158,7 @@ function initd3() {
   var link = linkNode
     .append("line")
     .style("stroke", "#aaa")
+    .style("stroke-dasharray", ("3, 3"))
 
 
 
