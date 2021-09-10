@@ -4885,6 +4885,569 @@ var zoiaTemplate = {
         }
       ],
       "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro CV Out 4",
+      "options": [
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "CV in",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro CV In 1",
+      "options": [
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "clock_filter",
+          "values": [
+            "none",
+            "2,8",
+            "1,4",
+            "5,5"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "CV out",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro CV In 2",
+      "options": [
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "clock_filter",
+          "values": [
+            "none",
+            "2,8",
+            "1,4",
+            "5,5"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "CV out",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro CV In 3",
+      "options": [
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "clock_filter",
+          "values": [
+            "none",
+            "2,8",
+            "1,4",
+            "5,5"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "CV out",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro CV In 4",
+      "options": [
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "clock_filter",
+          "values": [
+            "none",
+            "2,8",
+            "1,4",
+            "5,5"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "CV out",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro Headphone Amp",
+      "options": []
+      ,
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "Level",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro Audio Input 1",
+      "options": [
+        {
+          "name": "input_pad",
+          "values": [
+            "6dB",
+            "12dB",
+            "no_pad"
+          ]
+        }
+      ]
+      ,
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "output",
+          "type": 0
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro Audio Input 2",
+      "options": [
+        {
+          "name": "input_pad",
+          "values": [
+            "6dB",
+            "12dB",
+            "no_pad"
+          ]
+        }
+      ]
+      ,
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "output",
+          "type": 0
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro Audio Output 1",
+      "options": []
+      ,
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "output",
+          "type": 0
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro Audio Output 2",
+      "options": []
+      ,
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "output",
+          "type": 0
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro Pushbutton 1",
+      "options": [
+        {
+          "name": "action",
+          "values": [
+            "momentary",
+            "latching"
+          ]
+        },
+        {
+          "name": "normally",
+          "values": [
+            "zero",
+            "one"
+          ]
+        }
+      ]
+      ,
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "cv_output",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro Pushbutton 2",
+      "options": [
+        {
+          "name": "action",
+          "values": [
+            "momentary",
+            "latching"
+          ]
+        },
+        {
+          "name": "normally",
+          "values": [
+            "zero",
+            "one"
+          ]
+        }
+      ]
+      ,
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "cv_output",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro Pushbutton 1",
+      "options": [
+        {
+          "name": "action",
+          "values": [
+            "momentary",
+            "latching"
+          ]
+        },
+        {
+          "name": "normally",
+          "values": [
+            "zero",
+            "one"
+          ]
+        }
+      ]
+      ,
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "cv_output",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro CV Out 1",
+      "options": [
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "CV in",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro CV Out 2",
+      "options": [
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "CV in",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Euro CV Out 3",
+      "options": [
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "CV in",
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Sampler",
+      "options": [
+        {
+          "name": "out_range",
+          "values": [
+            "0 to 10V",
+            "0 to 5V",
+            "-5 to 5V"
+          ]
+        },
+        {
+          "name": "in_range",
+          "values": [
+            "0 to 1",
+            "-1 to 1"
+          ]
+        },
+        {
+          "name": "transpose",
+          "values": [
+            "A",
+            "C"
+          ]
+        }
+      ],
+      "minBlocks":"6",
+      "maxBlocks":"7",
+      "blocks":[
+        {
+          "name": "audio_in",
+          "type": 0
+        },
+        {
+          "name": "record",
+          "type": 1
+        },
+        {
+          "name": "sample_playback",
+          "type": 1
+        },
+        {
+          "name": "playback_speed",
+          "type": 1
+        },
+        {
+          "name": "start",
+          "type": 1
+        },
+        {
+          "name": "length",
+          "type": 1
+        },
+        {
+          "name": "cv_output",
+          "type": 1
+        },
+        {
+          "name": "audio_out",
+          "type": 0
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks;}
     }
   ],
   "colors":[
