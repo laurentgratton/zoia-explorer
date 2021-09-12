@@ -30,26 +30,32 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"frequency",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"resonance",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"lowpass output",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"hipass output",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"bandpass output",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -85,10 +91,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "pedal input L",
+          "direction": 1,
           "type": 0
         },
         {
           "name": "pedal input R",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -131,14 +139,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "pedal output L",
+          "direction": 0,
           "type":0
         },
         {
           "name": "pedal output R",
+          "direction": 0,
           "type":0
         },
         {
           "name": "gain",
+          "direction": 0,
           "type":1
         }
       ],
@@ -259,26 +270,32 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"step ",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"gate in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"queue start",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"out type 1: CV",
+          "direction": 1,
           "type": 1
         },
         {
           "name":"out type 2: gate",
+          "direction": 1,
           "type": 1
         },
         {
           "name":"out type 3: ratchet",
+          "direction": 1,
           "type": 1
         },
       ],
@@ -355,22 +372,27 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"frequency/trigger in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"swing amount",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"phase input",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"phase reset",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -441,42 +463,52 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "cv input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "retrigger",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "delay",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "attack",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "hold attack decay",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "decay",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "sustain",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "hold sustain release",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "release",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "cv output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -519,22 +551,27 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in 1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in 2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"level control",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out 1",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio out 2",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -560,14 +597,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in 1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in 2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -589,14 +629,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"crushed bits",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -610,14 +653,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "trigger",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -642,18 +688,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"input gain",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"output gain",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -682,18 +732,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"rise time",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"fall time",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -731,22 +785,27 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"delay time",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"modulation in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"tap tempo in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -803,18 +862,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"frequency",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"FM input",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"duty cycle",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -855,6 +918,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"switch",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -914,18 +978,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"note #",
+          "direction": 0,
           "type":1
         },
         {
           "name":"note out",
+          "direction": 1,
           "type":1
         },
         {
           "name":"gate out",
+          "direction": 1,
           "type":1
         },
         {
           "name":"trigger out",
+          "direction": 1,
           "type":1
         }
       ],
@@ -952,10 +1020,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -969,14 +1039,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"quant steps",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -998,22 +1071,27 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"slew rate",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"rising lag",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"falling lag",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -1369,18 +1447,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "note out",
+          "direction": 1,
           "type": 1
         },
         {
           "name": "gate out",
+          "direction": 1,
           "type": 1
         },
         {
           "name": "velocity out",
+          "direction": 1,
           "type": 1
         },
         {
           "name": "trigger out",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -1570,6 +1652,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name" : "cc value",
+          "direction": 1,
           "type" : 1
         }
       ],
@@ -1596,10 +1679,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -1657,38 +1742,47 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio inR",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"threshold",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"attack",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"release",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"ratio",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"sidechain in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio outR",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -1738,22 +1832,27 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"gain",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"frequency",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"q",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -1777,34 +1876,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"input L",
+          "direction": 0,
           "type" : 0
         },
         {
           "name":"input R",
+          "direction": 0,
           "type" : 0
         },
         {
           "name":"decay time",
+          "direction": 0,
           "type" : 1
         },
         {
           "name":"low eq",
+          "direction": 0,
           "type" : 1
         },
         {
           "name":"high eq",
+          "direction": 0,
           "type" : 1
         },
         {
           "name":"mix",
+          "direction": 0,
           "type" : 1
         },
         {
           "name":"output L",
+          "direction": 1,
           "type" : 0
         },
         {
           "name":"output R",
+          "direction": 1,
           "type" : 0
         }
       ],
@@ -1818,10 +1925,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -1849,14 +1958,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type":0
         },
         {
           "name":"filter gain",
+          "direction": 0,
           "type":1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type":0
         }
       ],
@@ -1878,18 +1990,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"key",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"scale",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -1940,34 +2056,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"input left",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"input right",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"control in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"resonance",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"width",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"output left",
+          "direction": 1,
           "type": 1
         },
         {
           "name":"output right",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2055,38 +2179,47 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "record",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "restart playback",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "stop/play",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "speed/pitch",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "start position",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "loop length",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "reverse playback",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -2138,14 +2271,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"CV input ",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"in select",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2191,14 +2327,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"CV Input",
+          "direction": 0,
           "type":1
         },
         {
           "name":"out select",
+          "direction": 0,
           "type":1
         },
         {
           "name":"CV output ",
+          "direction": 1,
           "type":1
         }
       ],
@@ -2244,14 +2383,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"in select",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -2298,14 +2440,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"out select",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -2352,6 +2497,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "channel pressure",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2373,14 +2519,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"sensitivity",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2395,12 +2544,56 @@ var zoiaTemplate = {
       }
     },
     {
-      "name": "Rythm",
-      "options":[],
-      "minBlocks": "",
-      "maxBlocks":"",
-      "blocks":[],
-      "calcBlocks": (d) => {}
+      "name": "Rhythm",
+      "options":[
+        {
+          "name": "done_ctrl",
+          "values": [
+            "off",
+            "on"
+          ]
+        }
+      ],
+      "minBlocks": "4",
+      "maxBlocks":"5",
+      "blocks":[
+        {
+          "name": "Record Start Stop",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name": "Rhythm In",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name": "Play",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name": "Done out",
+          "direction": 1,
+          "type": 1
+        },
+        {
+          "name": "Rhythm out",
+          "direction": 1,
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {
+        let blocks = [d.blocks[0], d.blocks[1], d.blocks[2]];
+
+        if(d.options[0] === 1) {
+          blocks.push(d.blocks[3]);
+        }
+
+        blocks.push(d.blocks[4]);
+
+        return blocks;
+      }
     },
     {
       "name": "Noise",
@@ -2410,6 +2603,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -2438,10 +2632,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "trigger in",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2492,34 +2688,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio inL",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio inR",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"threshold",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"attack",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"release",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"sidechain in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio outL",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio outR",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -2580,26 +2784,32 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio inL",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio inR",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "control in",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "depth",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "audio outL",
+          "direction": 1,
           "type": 0
         },
         {
           "name": "audio outR",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -2640,42 +2850,52 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"aud in L",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"aud in R",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"low shelf",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mid gain 1",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mid frequency 1",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mid gain 2",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mid frequency 2",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"high shelf",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"output L",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"output R",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -2747,38 +2967,47 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in 1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in 2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"delay time",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"feedback",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mod rate",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mod depth",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out1",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio out2",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -2832,6 +3061,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"cv output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2853,10 +3083,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "value",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2870,14 +3102,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "delay time",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2920,34 +3155,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV Input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "record",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "play",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "playback speed",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "start position",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "stop position",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "restart loop",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "cv output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2972,14 +3215,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"time constant",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -2993,18 +3239,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "reset switch",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "clock ratio",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -3026,14 +3276,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"CV positive input",
+          "direction": 0,
           "type":1
         },
         {
           "name":"CV negative input",
+          "direction": 0,
           "type":1
         },
         {
           "name":"CV output",
+          "direction": 1,
           "type":1
         }
       ],
@@ -3047,10 +3300,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -3064,10 +3319,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -3089,30 +3346,37 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio in 1",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio in 2",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "delay time",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "side gain",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio out 1",
+          "direction": 1,
           "type": 0
         },
         {
           "name": "audio out 2",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3143,6 +3407,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "cv output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -3164,6 +3429,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "cv input",
+          "direction": 0,
           "type": 1
         }
       ],
@@ -3192,10 +3458,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"CV Output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -3232,22 +3500,27 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in 1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in 2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"pan",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out 1",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio out 2",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3271,10 +3544,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"pitch out",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -3288,14 +3563,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"pitch shift",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3339,14 +3617,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"note in",
+          "direction": 0,
           "type":1
         },
         {
           "name":"gate in",
+          "direction": 0,
           "type":1
         },
         {
           "name":"velocity",
+          "direction": 0,
           "type":1
         }
       ],
@@ -3522,6 +3803,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name" : "cc out",
+          "direction": 0,
           "type" : 1
         }
       ],
@@ -3557,10 +3839,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "pc out",
+          "direction": 0,
           "type" : 1
         },
         {
           "name" : "trigger in",
+          "direction": 0,
           "type": 1
         }
       ],
@@ -3584,14 +3868,17 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio in 1",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio in 2",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3613,42 +3900,52 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in1 L",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in1 R",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in2 L",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in2 R",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out1",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio outL",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio outR",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3670,10 +3967,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3697,18 +3996,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"input gain",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"output gain",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3731,34 +4034,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"decay/feedback",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"rate",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"resonance",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out1",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio out2",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3807,18 +4118,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio in1",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio in2",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio out1",
+          "direction": 1,
           "type": 0
         },
         {
           "name": "audio out2",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3867,38 +4182,47 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "input left",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "input right",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "control in",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "regeneration",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "width",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "tone tilt eq",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "output left",
+          "direction": 1,
           "type": 0
         },
         {
           "name": "output right",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -3950,34 +4274,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"input left",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"input right",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"control in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"width",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"tone tilt eq",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"output left",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"output right",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4032,26 +4364,32 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"input left",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"input right",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"control in",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"width",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"output left",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"output right",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4102,34 +4440,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"sensitivity",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"min freq",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"max freq",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"filter Q",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out1",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio out2",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4188,22 +4534,27 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "frequency or ext in",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "duty cycle",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4226,34 +4577,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"input L",
+          "direction": 0,
           "value": 0
         },
         {
           "name":"input R",
+          "direction": 0,
           "value": 0
         },
         {
           "name":"decay time",
+          "direction": 0,
           "value": 1
         },
         {
           "name":"low eq",
+          "direction": 0,
           "value": 1
         },
         {
           "name":"high eq (lpf freq)",
+          "direction": 0,
           "value": 1
         },
         {
           "name":"mix",
+          "direction": 0,
           "value": 1
         },
         {
           "name":"output L",
+          "direction": 1,
           "value": 0
         },
         {
           "name":"output R",
+          "direction": 1,
           "value": 0
         }
       ],
@@ -4306,38 +4665,47 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"audio in1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"audio in2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"delay time",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"feedback",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mod rate",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mod depth",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"audio out1",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"audio out2",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4384,42 +4752,52 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"inL 1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"inR 1",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"inL 2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"inR 2",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"gain 1",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"gain 2",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"pan 1",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"pan 2",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"out L",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"out R",
+          "direction": 1,
           "type": 0
         },
       ],
@@ -4433,10 +4811,12 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV input",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "CV output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -4450,26 +4830,32 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "gain",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "size",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "mod width",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "mod rate",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "audio out",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4492,26 +4878,32 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"input L",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"input R",
+          "direction": 0,
           "type": 0
         },
         {
           "name":"decay time",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"output L",
+          "direction": 1,
           "type": 0
         },
         {
           "name":"output R",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4537,34 +4929,42 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "input L",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "input R",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "decay time",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "low eq",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "high eq (lpf freq)",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "mix",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "output L",
+          "direction": 1,
           "type": 0
         },
         {
           "name": "output R",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4586,6 +4986,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"cv in/audio in",
+          "direction": 0,
           "type": 0
         }
       ],
@@ -4622,6 +5023,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "cc value",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -4670,42 +5072,52 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio in",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "audio inR",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "grain size",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "grain position",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "density",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "texture",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "speed/pitch",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "freeze",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "audio out",
+          "direction": 1,
           "type": 0
         },
         {
           "name": "audio outR",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -4765,22 +5177,27 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"tap/cv control",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"sent",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"reset",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"send position",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"song position",
+          "direction": 0,
           "type": 1
         }
       ],
@@ -4823,18 +5240,22 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name":"tap input",
+          "direction": 0,
           "type": 1
         },
         {
           "name":"min time",
+          "direction": 0,
           "type" : 1
         },
         {
           "name": "max time",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -4881,6 +5302,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "pitch bend",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -4917,6 +5339,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV in",
+          "direction": 0,
           "type": 1
         }
       ],
@@ -4962,6 +5385,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV out",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -5007,6 +5431,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV out",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -5052,6 +5477,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV out",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -5097,6 +5523,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV out",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -5134,6 +5561,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "output",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -5157,6 +5585,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "output",
+          "direction": 1,
           "type": 0
         }
       ],
@@ -5171,6 +5600,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "output",
+          "direction": 0,
           "type": 0
         }
       ],
@@ -5185,6 +5615,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "output",
+          "direction": 0,
           "type": 0
         }
       ],
@@ -5214,6 +5645,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "cv_output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -5243,35 +5675,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "cv_output",
-          "type": 1
-        }
-      ],
-      "calcBlocks": (d) => {return d.blocks;}
-    },
-    {
-      "name": "Euro Pushbutton 1",
-      "options": [
-        {
-          "name": "action",
-          "values": [
-            "momentary",
-            "latching"
-          ]
-        },
-        {
-          "name": "normally",
-          "values": [
-            "zero",
-            "one"
-          ]
-        }
-      ]
-      ,
-      "minBlocks":"1",
-      "maxBlocks":"1",
-      "blocks":[
-        {
-          "name": "cv_output",
+          "direction": 1,
           "type": 1
         }
       ],
@@ -5308,6 +5712,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV in",
+          "direction": 0,
           "type": 1
         }
       ],
@@ -5344,6 +5749,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV in",
+          "direction": 0,
           "type": 1
         }
       ],
@@ -5380,6 +5786,7 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "CV in",
+          "direction": 0,
           "type": 1
         }
       ],
@@ -5416,38 +5823,208 @@ var zoiaTemplate = {
       "blocks":[
         {
           "name": "audio_in",
+          "direction": 0,
           "type": 0
         },
         {
           "name": "record",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "sample_playback",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "playback_speed",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "start",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "length",
+          "direction": 0,
           "type": 1
         },
         {
           "name": "cv_output",
+          "direction": 1,
           "type": 1
         },
         {
           "name": "audio_out",
+          "direction": 1,
           "type": 0
         }
       ],
       "calcBlocks": (d) => {return d.blocks;}
+    },
+    {
+      "name": "Device Control",
+      "options": [
+        {
+          "name": "control",
+          "values": [
+            "bypass",
+            "aux",
+            "performance"
+          ]
+        }
+      ],
+      "minBlocks":"1",
+      "maxBlocks":"1",
+      "blocks":[
+        {
+          "name": "bypass",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"aux",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"performance",
+          "direction": 0,
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {return d.blocks[d.options[0]];}
+    },
+    {
+      "name": "CV Mixer",
+      "options": [
+        {
+          "name": "Number of Channels",
+          "values": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "name": "levels",
+          "values": [
+            "summing",
+            "average"
+          ]
+        }
+      ],
+      "minBlocks":"5",
+      "maxBlocks":"17",
+      "blocks":[
+        {
+          "name": "CV In 1",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"CV In 2",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"CV In 3",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"CV In 4",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"CV In 5",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"CV In 6",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"CV In 7",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"CV In 8",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"Attenuator 1",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"Attenuator 2",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"Attenuator 3",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"Attenuator 4",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"Attenuator 5",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"Attenuator 6",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"Attenuator 7",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"Attenuator 8",
+          "direction": 0,
+          "type": 1
+        },
+        {
+          "name":"CV Output",
+          "direction": 1,
+          "type": 1
+        }
+      ],
+      "calcBlocks": (d) => {
+        let numInputs = d.options[0] + 1;
+        let blocks = [];
+
+        for(let i = 0; i < numInputs; i++){
+          blocks.push(d.blocks[i]);
+        }
+        for(let j = 0; j < numInputs; j++){
+          blocks.push(d.blocks[i + 8]);
+        }
+
+        blocks.push(d.blocks[16]);
+
+        return blocks;
+      }
     }
   ],
   "colors":[

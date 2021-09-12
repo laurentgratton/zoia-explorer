@@ -174,7 +174,7 @@ function initd3() {
 
   var circles = node
     .append("circle")
-    .attr("r", "10")
+    .attr("r", "30")
     .style("fill", function(d) {return zoiaTemplate.colors[d.color].hexColor;})
     .attr("id", function(d) {return "graph" + d.id})
     .call(d3.drag()
@@ -206,7 +206,7 @@ function initd3() {
       .id(function(d) { return d.id})
       .links(zoia.connections)
     )
-    .force("charge", d3.forceManyBody().strength(-300))
+    .force("charge", d3.forceManyBody().strength(-500))
     .force("center", d3.forceCenter(networkWidth / 2, networkHeight / 2))
     .on("tick", ticked);
 
