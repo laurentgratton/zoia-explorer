@@ -999,10 +999,11 @@ var zoiaTemplate = {
       ],
       "calcBlocks": (d) => {
         var numNotes = d.options[0];
+        var originalName = d.blocks[0].name;
         var blocks = [];
-        for(i = 1; i <= numNotes; i++){
-          tempNode = d.blocks[0];
-          tempNode.name += i;
+        for(var i = 1; i <= numNotes; i++){
+          var tempNode = Object.assign({}, d.blocks[0]);
+          tempNode.name = originalName + i;
           blocks.push(tempNode)
         }
         blocks.push(d.blocks[1]);

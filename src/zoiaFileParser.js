@@ -130,7 +130,28 @@ let moduleLabels = [
   "Room Reverb",
   "Pixel",
   "Midi Clock In",
-  "Granular"
+  "Granular",
+  "Midi Clock Out",
+  "Tap to CV",
+  "Midi Pitch Bend In",
+  "Euro CV Out 4",
+  "Euro CV In 1",
+  "Euro CV In 2",
+  "Euro CV In 3",
+  "Euro CV In 4",
+  "Euro Headphone Amp",
+  "Euro Audio Input 1",
+  "Euro Audio Input 2",
+  "Euro Audio Output 1",
+  "Euro Audio Output 2",
+  "Euro Pushbutton 1",
+  "Euro Pushbutton 2",
+  "Euro CV Out 1",
+  "Euro CV Out 2",
+  "Euro CV Out 3",
+  "Sampler",
+  "Device Control",
+  "CV Mixer"
 ]
 let colors = [
   "",
@@ -151,15 +172,28 @@ let colors = [
   "Mango"
 ]
 let showModule = (module) => {
+  console.log(module);
   if(module.info){
-    document.getElementById('modules').textContent = JSON.stringify(module.info);
     let moduleName = module.info.module.name;
     let blockName = module.info.block.name;
-    console.log(moduleName + " - " + blockName);
+    document.getElementById('modules').textContent = moduleName + " - " + blockName;
   } else {
-    document.getElementById('modules').textContent = JSON.stringify(module);
+    document.getElementById('modules').textContent = getModuleInfo(module);
   }
 }
+
+let getModuleInfo = (module) => {
+
+  console.log(module);
+  let data = `
+  -- ${module.typeName || module} --
+  `;
+
+
+
+  return data;
+}
+
 let getSize = (patch) => {
   let data = patch
     .substr(0, 11)
@@ -326,7 +360,6 @@ let getModules = (patch, numModules) => {
     totalSize += currModuleSize;
     current++;
   }
-  //debugger;
   return {'endPos': totalSize + 72, 'modules': modules};
 }
 let getModuleSize = (sizeBytes) => {

@@ -174,7 +174,7 @@ function initd3() {
 
   var circles = node
     .append("circle")
-    .attr("r", "30")
+    .attr("r", "10")
     .style("fill", function(d) {return zoiaTemplate.colors[d.color].hexColor;})
     .attr("id", function(d) {return "graph" + d.id})
     .call(d3.drag()
