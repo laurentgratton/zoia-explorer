@@ -26,6 +26,8 @@ let qtLaunchPatch = function(result) {
   let connections = getConnections(hex, modules.endPos, numConnections);
   let numPages = getNumberPages(hex, connections.endPos);
   let pageNames = getPageNames(hex, connections.endPos, numPages);
+  let numStarredElements = getNumberStarred(hex, pageNames.endPos);
+  //let starredElements = getStarredElement(hex, pageNames.endPos, numStarredElements);
   zoia.pages = [];
   new Set(modules.modules.map(p => p.page)).forEach(pageID => zoia.pages.push({id: pageID, name: pageNames.names ? pageNames.names[pageID] : "", modules: []}));
   modules.modules.map(m => zoia.pages.find(c => c.id === m.page).modules.push(m));
@@ -174,22 +176,18 @@ let colors = [
 let showModule = (module) => {
   console.log(module);
   if(module.info){
-    let moduleName = module.info.module.name;
+    let moduleName = module.moduleName;
     let blockName = module.info.block.name;
-    document.getElementById('modules').textContent = moduleName + " - " + blockName;
+    console.log(module);
+    document.getElementById('modules').textContent = `${moduleName} - ${blockName}`;
   } else {
-    document.getElementById('modules').textContent = getModuleInfo(module);
+    document.getElementById('modules').textContent = `${module.moduleName || getModuleInfo(module)}
+    ${module.options}`;
   }
 }
 
 let getModuleInfo = (module) => {
-
-  console.log(module);
-  let data = `
-  -- ${module.typeName || module} --
-  `;
-
-
+  let data = `${module.typeName || module}`;
 
   return data;
 }
@@ -342,13 +340,16 @@ let getModules = (patch, numModules) => {
     let currModuleSize = getModuleSize(data.substr(totalSize, 11)) * 4 * 3;
     let moduleData = data.substr(totalSize, currModuleSize);
     let moduleType = getModuleType(moduleData);
-    let position = getModuleGridPos(moduleData)
-    let numOptions = getModuleNumberOptions(moduleData)
+    let position = getModuleGridPos(moduleData);
+    let numOptions = getModuleNumberOptions(moduleData);
+    let additionalOptions = getModuleAdditionalOptions(moduleData, currModuleSize);
+    let moduleName = getModuleName(moduleData, currModuleSize);
     let currModule = {
       'id': current,
       'type': moduleType,
       'typeName': moduleLabels[moduleType],
       'page': getModulePage(moduleData),
+      'moduleName': moduleName,
       'position': position,
       'coords': posToXY(position),
       'color': getModuleColor(moduleData),
@@ -413,6 +414,28 @@ let getModuleNumberOptions = (moduleData) => {
     .join('');
   return parseInt(params || 0, 16) + 1;
 }
+let getModuleAdditionalOptions = (moduleData, moduleSize, hasName) => {
+  let data = moduleData.substr(120, moduleSize - (hasName ? 168 : 120));
+  let numOptions = data.length / 12;
+  let results = data.match(/.{1,12}/g).map(item =>
+      item.split(' ')
+          .reverse()
+          .filter(c => c !== "00")
+          .join('')
+  )
+  return results;
+}
+
+let getModuleName = (moduleData, moduleSize) => {
+  return moduleData.substr(moduleSize - 48, 47)
+      .split(' ')
+      .reverse()
+      .filter(c => c !== "00")
+      .map(c => String.fromCharCode(parseInt(c, 16)))
+      .reverse()
+      .join('')
+}
+
 let getModuleOptions = (moduleData, numOptions) => {
   let options = [];
   let currentEnd = 96;
@@ -440,4 +463,13 @@ let getModuleLabel = (moduleData) => {
     .trim();
   debugger;
   return label;
+}
+
+let getNumberStarred = (patch, endPages) => {
+  let numberStarred = patch.substr(endPages, 11)
+      .split(' ')
+      .reverse()
+      .filter(c => c != "00")
+      .join('');
+  return parseInt(numberStarred || 0, 16);
 }

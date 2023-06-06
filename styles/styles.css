@@ -14,7 +14,10 @@ p.center {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.node-labels{font-size: 12px;}
+.node-labels{
+    font-size: 12px;
+    font-weight: bold;
+}
 
 .highlighted {
     stroke: orange !important;

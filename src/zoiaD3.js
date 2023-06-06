@@ -43,7 +43,8 @@ function gridData() {
         "color" : zoiaTemplate.colors[module.color].hexColor,
         "module": zoiaTemplate.modules[module.type],
         "block": module.blocks[0],
-        "options": module.options
+        "options": module.options,
+        "moduleName": module.moduleName
       }
 
       if(module.blocks.length > 1) {
