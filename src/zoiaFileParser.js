@@ -26,7 +26,7 @@ let qtLaunchPatch = function(result) {
   let connections = getConnections(hex, modules.endPos, numConnections);
   let numPages = getNumberPages(hex, connections.endPos);
   let pageNames = getPageNames(hex, connections.endPos, numPages);
-  let numStarredElements = getNumberStarred(hex, pageNames.endPos);
+  //let numStarredElements = getNumberStarred(hex, pageNames.endPos);
   //let starredElements = getStarredElement(hex, pageNames.endPos, numStarredElements);
   zoia.pages = [];
   new Set(modules.modules.map(p => p.page)).forEach(pageID => zoia.pages.push({id: pageID, name: pageNames.names ? pageNames.names[pageID] : "", modules: []}));
@@ -187,9 +187,7 @@ let showModule = (module) => {
 }
 
 let getModuleInfo = (module) => {
-  let data = `${module.typeName || module}`;
-
-  return data;
+  return `${module.typeName || module}`;
 }
 
 let getSize = (patch) => {
@@ -199,20 +197,17 @@ let getSize = (patch) => {
     .reverse()
     .filter(c => c !== "00")
     .join('');
-  let size = parseInt(data, 16);
-  return size;
+  return parseInt(data, 16);
 }
 let getName = (patch) => {
   // get patch name hex
-  let name = patch.substr(12, 47)
-    .split(' ')
-    .map((i) => parseInt(i, 16))
-    .map(n => n === 0 ? 32 : n)
-    .map(c => String.fromCharCode(c))
-    .join('')
-    .trim();
-
-  return name;
+  return patch.substr(12, 47)
+      .split(' ')
+      .map((i) => parseInt(i, 16))
+      .map(n => n === 0 ? 32 : n)
+      .map(c => String.fromCharCode(c))
+      .join('')
+      .trim();
 }
 let getNumConnections = (patch, endModules) => {
   let data = patch.substr(endModules, 11)
@@ -226,7 +221,7 @@ let getNumberPages = (patch, endConnections) => {
   let numberPages = patch.substr(endConnections, 11)
     .split(' ')
     .reverse()
-    .filter(c => c != "00")
+    .filter(c => c !== "00")
     .join('');
   return parseInt(numberPages || 0, 16);
 }
@@ -285,7 +280,7 @@ let getConnectionSource = (connection) => {
   let source = connection.substr(0, 11)
     .split(' ')
     .reverse()
-    .filter(c => c != "00")
+    .filter(c => c !== "00")
     .join('');
   return parseInt(source || 0, 16);
 }
@@ -293,7 +288,7 @@ let getConnectionSourceOutput = (connection) => {
   let source = connection.substr(12, 11)
     .split(' ')
     .reverse()
-    .filter(c => c != "00")
+    .filter(c => c !== "00")
     .join('');
   return parseInt(source || 0, 16);
 }
@@ -301,7 +296,7 @@ let getConnectionDestination = (connection) => {
   let source = connection.substr(24, 11)
     .split(' ')
     .reverse()
-    .filter(c => c != "00")
+    .filter(c => c !== "00")
     .join('');
   return parseInt(source || 0, 16);
 }
@@ -309,7 +304,7 @@ let getConnectionDestinationInput = (connection) => {
   let source = connection.substr(36, 11)
     .split(' ')
     .reverse()
-    .filter(c => c != "00")
+    .filter(c => c !== "00")
     .join('');
   return parseInt(source || 0, 16);
 }
@@ -317,7 +312,7 @@ let getConnectionStrength = (connection) => {
   let source = connection.substr(48, 11)
     .split(' ')
     .reverse()
-    .filter(c => c != "00")
+    .filter(c => c !== "00")
     .join('');
   return parseInt(source || 0, 16);
 }
@@ -334,7 +329,6 @@ let getModules = (patch, numModules) => {
   let data = patch.substr(72);
   let current = 0;
   let totalSize = 0;
-  let container = document.getElementById('modules');
   let modules = [];
   while(current < numModules){
     let currModuleSize = getModuleSize(data.substr(totalSize, 11)) * 4 * 3;
@@ -342,7 +336,7 @@ let getModules = (patch, numModules) => {
     let moduleType = getModuleType(moduleData);
     let position = getModuleGridPos(moduleData);
     let numOptions = getModuleNumberOptions(moduleData);
-    let additionalOptions = getModuleAdditionalOptions(moduleData, currModuleSize);
+    //let additionalOptions = getModuleAdditionalOptions(moduleData, currModuleSize);
     let moduleName = getModuleName(moduleData, currModuleSize);
     let currModule = {
       'id': current,
@@ -416,7 +410,7 @@ let getModuleNumberOptions = (moduleData) => {
 }
 let getModuleAdditionalOptions = (moduleData, moduleSize, hasName) => {
   let data = moduleData.substr(120, moduleSize - (hasName ? 168 : 120));
-  let numOptions = data.length / 12;
+  //let numOptions = data.length / 12;
   let results = data.match(/.{1,12}/g).map(item =>
       item.split(' ')
           .reverse()
@@ -469,7 +463,7 @@ let getNumberStarred = (patch, endPages) => {
   let numberStarred = patch.substr(endPages, 11)
       .split(' ')
       .reverse()
-      .filter(c => c != "00")
+      .filter(c => c !== "00")
       .join('');
   return parseInt(numberStarred || 0, 16);
 }
