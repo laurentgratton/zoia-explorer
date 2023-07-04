@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178247527-1"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLK6GTGHWH"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'UA-178247527-1');
+        gtag('config', 'G-BLK6GTGHWH');
     </script>
 </head>
 <body>
-<h1>Zoia Patch Explorer</h1>
-<p class="center">Choose a patch to get started: <input id="browseOpen" accept=".bin" type="file"/></p>
-<p id="loaded-message">You can select modules by clicking on the nodes of the graph, or by selecting blocks on the Zoia.</p>
-
+<div class="load-file" id="loader">
+    <h1>Zoia Patch Explorer</h1>
+    <p class="center">Choose a patch to get started: <input id="browseOpen" accept=".bin" type="file"/></p>
+    <p id="loaded-message">You can select modules by clicking on the nodes of the graph, or by selecting blocks on the Zoia.</p>
+</div>
 <div class="container-fluid">
     <div class="row">
         <div class="left-panel col-12 col-md-6">

@@ -2,6 +2,67 @@
 var fileInput = document.getElementById("browseOpen");
 var zoia = {};
 
+const preventDefaults = event => {
+  event.preventDefault();
+  event.stopPropagation();
+};
+
+let handleDrop = event => {
+  const dataRefs = {};
+  dataRefs.files = event.dataTransfer.files;
+  handleFiles(dataRefs);
+};
+
+const highlight = event =>
+    event.target.classList.add('highlight');
+
+const unhighlight = event =>
+    event.target.classList.remove('highlight');
+
+const zone = document.getElementById('loader');
+;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(event => {
+  zone.addEventListener(event, preventDefaults, false);
+  document.body.addEventListener(event, preventDefaults, false);
+});
+
+;['dragenter', 'dragover'].forEach(event => {
+  zone.addEventListener(event, highlight, false);
+});
+;['dragleave', 'drop'].forEach(event => {
+  zone.addEventListener(event, unhighlight, false);
+});
+
+zone.addEventListener('drop', handleDrop, false);
+
+const isBinFile = file => {
+  return file.name.endsWith('.bin');
+}
+
+let parseFiles = dataRefs => {
+  let fr = new FileReader();
+  fr.onloadend = function () {
+    qtLaunchPatch(this.result);
+  };
+  fr.readAsBinaryString(dataRefs.files[0]);
+}
+
+const handleFiles = dataRefs => {
+
+  let files = [...dataRefs.files];
+
+  files = files.filter(item => {
+    if (!isBinFile(item)) {
+      console.log('Not an image, ', item);
+    }
+    return isBinFile(item) ? item : null;
+  });
+
+  if (!files.length) return;
+  dataRefs.files = files;
+
+  parseFiles(dataRefs);
+}
+
 let qtLaunchPatch = function(result) {
   d3.select("body").select("button").remove();
   d3.select("#grid").selectAll("svg").remove();
@@ -36,6 +97,7 @@ let qtLaunchPatch = function(result) {
   if(pageNames && pageNames.names) {
     pageNames.names.map((n, i) => {if(zoia.pages[i]) { zoia.pages[i].name = n}});
   }
+  document.getElementById('loader').classList.remove('load-file');
   document.getElementById('grid').classList.add("show");
   document.getElementById('loaded-message').classList.add("show");
   initd3();

@@ -6,6 +6,20 @@ p.center {
     text-align: center;
 }
 
+.load-file {
+    margin: 20px;
+    padding: 20px 0;
+    border: 2px dashed #ccc;
+}
+
+#loader.highlight {
+    border: 2px dashed #348b1d;;
+}
+
+p#loader {
+    width:auto;
+}
+
 #network-graph {
     margin-top: 30px;
 }
